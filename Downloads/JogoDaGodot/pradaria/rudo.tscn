@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b0ii8er6iats0"]
+
+[node name="dialogo_placa" type="Control"]
+custom_minimum_size = Vector2(320, 80)
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_top = -193.0
+offset_right = 787.0
+offset_bottom = -67.0
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.278431)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 708.0
+offset_bottom = 119.0
+
+[node name="borda" type="ColorRect" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+
+[node name="face" type="TextureRect" parent="ColorRect/HBoxContainer/borda"]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 112.0
+expand_mode = 1

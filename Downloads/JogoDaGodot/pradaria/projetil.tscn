@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0qf6l23lt1by"]
+
+[ext_resource type="Script" uid="uid://c680hu13yvh33" path="res://projetil.gd" id="1_4dvx7"]
+[ext_resource type="Texture2D" uid="uid://cemdtvs6n6iu5" path="res://TileSets/fire-ball-element-illustration-free-png.webp" id="2_e138m"]
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_4dvx7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 1)
+scale = Vector2(0.104082, 0.0765306)
+texture = ExtResource("2_e138m")

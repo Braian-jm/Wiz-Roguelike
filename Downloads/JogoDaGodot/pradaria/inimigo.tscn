@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2hkygw4vyfpr"]
+
+[ext_resource type="Script" uid="uid://vrbx8l2180cy" path="res://inimigo.gd" id="1_030df"]
+[ext_resource type="Texture2D" uid="uid://bl3dh1eop1eir" path="res://life bar sprites/pixilart-drawing (1).png" id="2_0b8xr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g45jm"]
+size = Vector2(95, 96)
+
+[node name="inimigo" type="CharacterBody2D"]
+position = Vector2(586, 397)
+script = ExtResource("1_030df")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 2.38419e-07)
+scale = Vector2(0.0957031, 0.0927734)
+texture = ExtResource("2_0b8xr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g45jm")

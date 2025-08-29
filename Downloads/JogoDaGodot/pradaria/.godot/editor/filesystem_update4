@@ -1,0 +1,8 @@
+res://inimigo.tscn
+res://addons/phantom_camera/themes/theme.tres
+res://definitivo.tscn
+res://rudo.tscn
+res://inimigo.gd
+res://projetil.gd
+res://projetil.tscn
+res://movimenta+ºao_player/playerMove.gd
