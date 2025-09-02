@@ -86,6 +86,7 @@ grow_vertical = 2
 texture = ExtResource("2_6ey6a")
 
 [node name="MenuBar" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.391
@@ -99,11 +100,13 @@ offset_bottom = 0.215942
 alignment = 1
 
 [node name="restart" type="Button" parent="MenuBar"]
+visible = false
 layout_mode = 2
 text = "Restart
 "
 
 [node name="quit" type="Button" parent="MenuBar"]
+visible = false
 layout_mode = 2
 text = "Quit
 "

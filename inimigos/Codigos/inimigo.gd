@@ -1,15 +1,13 @@
 extends CharacterBody2D
 
 @onready var animation: AnimatedSprite2D = $Inimigo_animation
-const def = preload("res://Mapa/definitivo.gd");
-var mapa = def.new()
-
+var mapa;
 var vida = 2
 var char  
 var enemy_actual_speed = 50; 
 func _ready() -> void:
 	char = get_tree().root.get_node("mapa/player")
-
+	mapa = get_tree().root.get_node("mapa")
 func _physics_process(delta: float) -> void:
 	perseguir()
 

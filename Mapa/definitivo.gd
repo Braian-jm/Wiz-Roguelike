@@ -14,6 +14,7 @@ func spawn_enemy() -> void:
 		var enemy = enemy_scene.instantiate(); 
 		add_child(enemy);
 		inimigos_vivos += 1; 
+		print(inimigos_vivos)	
 		enemy.global_position = calcular_spawn(); 
 		enemy.char = char; 
 		print(enemy.global_position)
@@ -34,7 +35,6 @@ func calcular_spawn() -> Vector2:
 
 
 func _on_spawn_enemy_timer_timeout() -> void:
-	print("foi aq")
 	spawn_enemy();
 	
 

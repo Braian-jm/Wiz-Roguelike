@@ -7,7 +7,7 @@ func _ready():
 
 
 func dano(): 
-	value = clamp(value - 1, min_value, max_value)
+	value = clamp(value - 4, min_value, max_value)
 	if value <= min_value:
 		print("morreu")
 		mapa.lose_game();

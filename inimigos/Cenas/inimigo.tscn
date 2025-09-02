@@ -112,7 +112,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g45jm"]
-size = Vector2(13, 21)
+size = Vector2(6, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enrbn"]
 size = Vector2(13, 21)
@@ -120,19 +120,19 @@ size = Vector2(13, 21)
 [node name="inimigo" type="CharacterBody2D" groups=["inimigo"]]
 position = Vector2(586, 397)
 collision_layer = 4
-collision_mask = 0
+collision_mask = 6
 script = ExtResource("1_fmvna")
 
 [node name="Inimigo_animation" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.90735e-06, -1.19209e-06)
-scale = Vector2(1.29316, 1.02319)
+texture_filter = 1
+position = Vector2(1.72257e-05, -0.999995)
+scale = Vector2(1.03119, 0.859422)
 sprite_frames = SubResource("SpriteFrames_0b8xr")
 animation = &"Right"
 frame_progress = 0.520678
 
 [node name="inimigo_colisao" type="CollisionShape2D" parent="." groups=["inimigo"]]
-visible = false
-position = Vector2(-1.5, 0.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_g45jm")
 
 [node name="damage" parent="." instance=ExtResource("2_i43vo")]
