@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh86mr0cekfhd"]
+
+[ext_resource type="Script" uid="uid://bs00jeh77c5ag" path="res://inimigos/Codigos/damage.gd" id="1_i1jcd"]
+
+[node name="damage_enemy" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_i1jcd")
+
+[node name="damage_timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="damage_timer" to="." method="_on_damage_timer_timeout"]

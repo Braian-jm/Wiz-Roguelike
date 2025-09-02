@@ -1,0 +1,14 @@
+TextureRect
+MarginContainer
+Button
+VBoxContainer
+Control
+AnimatedSprite2D
+AnimationPlayer
+MenuBar
+ColorRect
+CollisionShape2D
+CollisionPolygon2D
+Area2D
+Timer
+Sprite2D

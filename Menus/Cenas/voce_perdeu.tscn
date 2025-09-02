@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=3 uid="uid://2qjfoj6ocy36"]
+
+[ext_resource type="Script" uid="uid://brshwctyw5uto" path="res://Menus/Codigos/voce_perdeu.gd" id="1_3m7tx"]
+[ext_resource type="Texture2D" uid="uid://br6t0lh3qj6ci" path="res://Menus/Imagens/Game_over.png" id="2_6ey6a"]
+
+[sub_resource type="Animation" id="Animation_w83ye"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuBar:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jc2x5"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0980392), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuBar:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2em4t"]
+_data = {
+&"RESET": SubResource("Animation_w83ye"),
+&"new_animation": SubResource("Animation_jc2x5")
+}
+
+[node name="VocePerdeu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_3m7tx")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6ey6a")
+
+[node name="MenuBar" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.391
+anchor_top = 0.694
+anchor_right = 0.599
+anchor_bottom = 0.833
+offset_left = -0.432037
+offset_top = 0.287994
+offset_right = -0.0480347
+offset_bottom = 0.215942
+alignment = 1
+
+[node name="restart" type="Button" parent="MenuBar"]
+layout_mode = 2
+text = "Restart
+"
+
+[node name="quit" type="Button" parent="MenuBar"]
+layout_mode = 2
+text = "Quit
+"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 136.0
+offset_right = 741.0
+offset_bottom = 198.0
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2em4t")
+}
+autoplay = "new_animation"
+
+[connection signal="pressed" from="MenuBar/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MenuBar/quit" to="." method="_on_quit_pressed"]
